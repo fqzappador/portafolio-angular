@@ -17,25 +17,24 @@
         <ul class="rk-menu">
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="home" class="rk-menu__link">Home</a>
           </li>
-          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="pages" class="rk-menu__link">Pages</a>
-            <nav class="rk-menu__sub">
-              <ul class="rk-container">
-                <li routerLinkActive="active" class="rk-menu__item"><a routerLink="item" class="rk-menu__link">Gallery Items</a></li>
-              </ul>
-            </nav>
-          </li>
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="about" class="rk-menu__link">About Us</a>
           </li>
         </ul>
 
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
-          <label for="urku-search">
+        <div class="rk-search">
+          <input type="text" 
+                  (keyup.enter)="buscarProducto( txtBuscar.value )" 
+                  placeholder="Search..." 
+                  id="urku-search" 
+                  class="rk-search-field"
+                  #txtBuscar>
+          
+          <label for="urku-search"> 
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>
           </label>
-        </form>
+        </div>
 
       </nav>
     </div>
